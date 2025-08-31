@@ -9,7 +9,6 @@ router.register(r'patients', PatientViewSet, basename='patient')
 
 urlpatterns = [
     path('auth/register/', RegisterAPIView.as_view()),
-    path('auth/login/', TokenObtainPairView.as_view()),
     path('auth/refresh/', TokenRefreshView.as_view()),
     path('', include(router.urls)),
     path('mappings/', MappingCreateListView.as_view()),
